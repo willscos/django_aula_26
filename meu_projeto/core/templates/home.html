@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produtos</title>
+</head>
+<body>
+
+    <h1>Lista de Produtos</h1>
+
+    <a href="/criar/">Novo Produto</a>
+
+    <hr>
+
+    {% for produto in produtos %}
+
+        <h3>{{ produto.nome }}</h3>
+
+        <p>R$ {{ produto.preco }}</p>
+
+        <a href="/editar/{{ produto.id }}/">
+            Editar
+        </a>
+
+        <a href="/deletar/{{ produto.id }}/">
+            Deletar
+        </a>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>

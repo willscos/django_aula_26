@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Produto</title>
+</head>
+<body>
+
+    <h1>Editar Produto</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <input 
+            type="text"
+            name="nome"
+            value="{{ produto.nome }}"
+        >
+
+        <input
+            type="number"
+            step="0.01"
+            name="preco"
+            value="{{ produto.preco }}"
+        >
+
+        <button type="submit">
+            Atualizar
+        </button>
+
+    </form>
+
+</body>
+</html>

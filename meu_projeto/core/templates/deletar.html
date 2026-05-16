@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deletar Produto</title>
+</head>
+<body>
+
+    <h1>Deseja deletar?</h1>
+
+    <h3>{{ produto.nome }}</h3>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <button type="submit">
+            Confirmar
+        </button>
+
+    </form>
+
+</body>
+</html>
